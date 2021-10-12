@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Alex-it-work <Mr.Kirieiev@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://skimdb.npmjs.com/registry"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}
