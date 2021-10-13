@@ -3,16 +3,16 @@ const { taskController } = require('../controllers');
 
 const taskRouter = Router();
 
-taskRouter.get('/', taskController.getTasks);
+taskRouter
+  .route('/')
+  .get(taskController.getTasks)
+  .post(taskController.createTask);
 
-taskRouter.get('/:taskId', taskController.getTaskById);
-
-taskRouter.post('/', taskController.createTask);
-
-taskRouter.patch('/:taskId', taskController.updateTask);
-
-taskRouter.put('/:taskId', taskController.updateTask);
-
-taskRouter.delete('/:taskId', taskController.deleteTask);
+taskRouter
+  .route('/:taskId')
+  .get(taskController.getTaskById)
+  .patch(taskController.updateTask)
+  .put(taskController.updateTask)
+  .delete(taskController.deleteTask);
 
 module.exports = taskRouter;
